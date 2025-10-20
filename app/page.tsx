@@ -228,7 +228,7 @@ export default function Home() {
         <div className="mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
           <div className="gap-12 grid lg:grid-cols-2">
             {/* Pet Sitting Service */}
-            <div className="bg-card shadow-sm p-8 border rounded-lg">
+            <div className="flex flex-col bg-card shadow-sm p-8 border rounded-lg h-full">
               <div className="mb-8 text-center">
                 <div className="flex justify-center items-center bg-primary/10 mx-auto mb-4 rounded-full w-20 h-20">
                   <Heart className="w-10 h-10 text-primary" />
@@ -237,8 +237,8 @@ export default function Home() {
                 <p className="mb-6 font-bold text-md text-primary">a partir de R$ 25 por visita</p>
               </div>
 
-              <div className="space-y-4 mb-8">
-                <h3 className="mb-4 font-semibold text-card-foreground text-md">O que inclui:</h3>
+              <div className="space-y-4 mb-8 grow">
+                <h3 className="mb-4 font-semibold text-card-foreground text-lg">O que inclui:</h3>
                 <div className="space-y-3">
                   <div className="flex items-center">
                     <CheckCircle className="mr-3 w-5 h-5 text-primary" />
@@ -272,7 +272,7 @@ export default function Home() {
                 e mantenho o cantinho dele sempre limpo e confortável.
               </p>
 
-              <div className="text-center">
+              <div className="mt-auto text-center">
                 <Link
                   href="/contato"
                   className="inline-flex items-center bg-primary hover:bg-primary/90 px-6 py-3 rounded-lg font-semibold text-primary-foreground transition-colors"
@@ -283,7 +283,7 @@ export default function Home() {
             </div>
 
             {/* Dog Walking Service */}
-            <div className="bg-card shadow-sm p-8 border rounded-lg">
+            <div className="flex flex-col bg-card shadow-sm p-8 border rounded-lg h-full">
               <div className="mb-8 text-center">
                 <div className="flex justify-center items-center bg-primary/10 mx-auto mb-4 rounded-full w-20 h-20">
                   <PawPrint className="w-10 h-10 text-primary" />
@@ -292,8 +292,8 @@ export default function Home() {
                 <p className="mb-6 font-bold text-md text-primary">a partir de R$ 25 por passeio</p>
               </div>
 
-              <div className="space-y-4 mb-8">
-                <h3 className="mb-4 font-semibold text-card-foreground text-xl">O que inclui:</h3>
+              <div className="space-y-4 mb-8 grow">
+                <h3 className="mb-4 font-semibold text-card-foreground text-lg">O que inclui:</h3>
                 <div className="space-y-3">
                   <div className="flex items-center">
                     <CheckCircle className="mr-3 w-5 h-5 text-primary" />
@@ -328,7 +328,7 @@ export default function Home() {
                 seguro e relaxado para casa.
               </p>
 
-              <div className="self-end text-center">
+              <div className="mt-auto text-center">
                 <Link
                   href="/contato"
                   className="inline-flex items-center bg-primary hover:bg-primary/90 px-6 py-3 rounded-lg font-semibold text-primary-foreground transition-colors"
