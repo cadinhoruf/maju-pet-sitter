@@ -107,7 +107,7 @@ export function FAQ() {
                     alt="Cachorro curioso e atento - FAQ Maria Julia Pet Sitter"
                     width={500}
                     height={600}
-                    className="rounded-full w-full h-auto object-cover scale-y-[-1]"
+                    className="brightness-90 rounded-full w-full h-auto object-cover"
                     priority
                     loading="eager"
                     title="Pet curioso e atento"
