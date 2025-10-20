@@ -18,8 +18,10 @@ export function WhatsAppButton({
   const sendWhatsAppMessage = (service?: string) => {
     let message = `Olá! Gostaria de saber mais sobre seus serviços de pet sitting/dog walking.`;
 
-    if (service) {
+    if (service !== "necessidades específicas") {
       message = `Olá! Gostaria de contratar o serviço: ${service}. Podemos conversar sobre os detalhes?`;
+    } else if (service === "necessidades específicas") {
+      message = `Olá! Gostaria de saber mais sobre seus serviços de necessidades específicas. Podemos conversar sobre os detalhes?`;
     }
 
     const encodedMessage = encodeURIComponent(message);

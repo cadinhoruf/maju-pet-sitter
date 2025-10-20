@@ -7,21 +7,21 @@ const testimonials = [
   {
     id: 1,
     name: "Bob",
-    date: "28 de outubro, 2024",
+    date: "15 de setembro, 2025",
     image: "/BOB.jpg",
-    text: "Meus pais estavam preocupados com minha saúde, pois eu não queria comer nada. A Maria Julia ajudou muito, explicou as peculiaridades da alimentação de papagaios e ofereceu um plano alimentar especial. Delicioso!"
+    text: "Meu pai viaja muito e eu fico sozinho. A tia Maju cuida e me leva para passear quase todos os dias. Fora as brincadeiras que ela faz comigo, eu amo muito!"
   },
   {
     id: 2,
     name: "Nala",
-    date: "3 de março, 2024",
+    date: "2 de setembro, 2025",
     image: "/NALA.jpg",
-    text: "Quando a mamãe viajou para o exterior, ela não pôde me levar com ela. Então, ela chamou a Maria Julia, e ela veio cuidar de mim por 2 semanas. Eu realmente gostei da Maria Julia; nos divertimos muito e aproveitamos longos passeios."
+    text: "Quando a mamãe viajou, ela não pôde me levar com ela. Então, ela chamou a Maria Julia, e ela veio cuidar de mim. Eu realmente gostei da Maria Julia; nos divertimos muito, ela é muito amorosa e cuida do meu bem-estar."
   },
   {
     id: 3,
     name: "Vanilla",
-    date: "12 de dezembro, 2024",
+    date: "2 de setembro, 2025",
     image: "/VANILLA.jpg",
     text: "Tenho que tomar medicamentos regularmente. Quando meus pais decidiram sair de férias, eles estavam preocupados com minha alimentação. Eles chamaram a pet sitter Maria Julia, e nos gostamos muito!"
   },
