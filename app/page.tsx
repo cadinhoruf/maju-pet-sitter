@@ -98,10 +98,14 @@ export default function Home() {
                 <div className="relative rounded-full w-full max-w-md overflow-hidden">
                   <Image
                     src="/BOB-2.jpg"
-                    alt="Cachorro feliz"
+                    alt="Cachorro feliz brincando com bolinha - Maria Julia Pet Sitter"
                     width={400}
                     height={600}
                     className="w-full h-auto object-cover"
+                    priority
+                    loading="eager"
+                    title="Pet feliz e bem cuidado"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   />
                 </div>
               </div>

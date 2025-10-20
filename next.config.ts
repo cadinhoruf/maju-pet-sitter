@@ -2,7 +2,10 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   images: {
-    domains: ["res2.weblium.site"],
+    remotePatterns: [{
+      protocol: "https",
+      hostname: "res2.weblium.site",
+    }],
   },
 };
 

@@ -75,9 +75,12 @@ export function Testimonials() {
                 <div className="relative mx-auto rounded-full w-24 h-24 overflow-hidden">
                   <Image
                     src={testimonial.image}
-                    alt={testimonial.name}
+                    alt={`${testimonial.name} - Pet cliente da Maria Julia Pet Sitter`}
                     fill
                     className="object-cover"
+                    loading="lazy"
+                    title={`Depoimento de ${testimonial.name}`}
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   />
                 </div>
               </div>
