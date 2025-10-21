@@ -167,6 +167,6 @@ export class CookieManager {
 // Declaração global para TypeScript
 declare global {
   interface Window {
-    gtag?: (...args: any[]) => void;
+    gtag?: (...args: unknown[]) => void;
   }
 }

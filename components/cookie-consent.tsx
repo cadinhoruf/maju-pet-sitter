@@ -51,7 +51,7 @@ export function CookieConsent({
     } catch (error) {
       console.error("Error checking cookie consent:", error);
     }
-  }, []);
+  }, [mode]);
 
   return (
     <>
@@ -74,7 +74,7 @@ export function CookieConsent({
               <div className="p-3 sm:p-4">
                 <p className="font-normal text-muted-foreground text-xs sm:text-sm text-start">
                   <strong>🍪 O que são cookies?</strong><br />
-                  São como "lembrancinhas" que deixamos no seu computador para lembrar suas preferências e tornar sua visita mais agradável.
+                  São como &quot;lembrancinhas&quot; que deixamos no seu computador para lembrar suas preferências e tornar sua visita mais agradável.
                   <br />
                   <br />
                   <strong>😊 E se eu recusar?</strong><br />
@@ -111,12 +111,12 @@ export function CookieConsent({
         >
           <div className="bg-background dark:bg-card shadow-lg m-0 sm:m-3 border border-border rounded-lg">
             <div className="flex justify-between items-center p-3">
-              <h1 className="font-medium text-base sm:text-lg"></h1>Cookies
+              <h1 className="font-medium text-base sm:text-lg">Usamos cookies</h1>
               <CookieIcon className="w-4 sm:w-[1.2rem] h-4 sm:h-[1.2rem]" />
             </div>
             <div className="-mt-2 p-3">
               <p className="text-muted-foreground text-xs sm:text-sm text-left">
-                <strong>🍪 Cookies:</strong> "Lembrancinhas" que deixamos no seu navegador para melhorar sua experiência.
+                <strong>🍪 Cookies:</strong> &quot;Lembrancinhas&quot; que deixamos no seu navegador para melhorar sua experiência.
                 <br />
                 <strong>😊 Se recusar:</strong> Fique tranquilo! O site funciona perfeitamente mesmo assim.
               </p>
@@ -155,7 +155,7 @@ export function CookieConsent({
               </div>
               <div className="p-3">
                 <p className="text-[11px] text-muted-foreground sm:text-xs">
-                  <strong>🍪 Cookies:</strong> "Lembrancinhas" para melhorar sua experiência.<br />
+                  <strong>🍪 Cookies:</strong> &quot;Lembrancinhas&quot; para melhorar sua experiência.<br />
                   <strong>😊 Recusar:</strong> Site funciona perfeitamente!
                 </p>
                 <div className="items-center gap-2 grid grid-cols-2 mt-3">

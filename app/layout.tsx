@@ -1,5 +1,6 @@
 import { CookieConsent } from "@/components/cookie-consent";
 import { GoogleAnalyticsComponent } from "@/components/google-analytics";
+import { Analytics } from "@vercel/analytics/next";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
@@ -64,6 +65,7 @@ export default function RootLayout({
           <GoogleAnalyticsComponent measurementId={gaMeasurementId} />
         )}
         <CookieConsent variant="default" />
+        <Analytics />
       </body>
     </html>
   );
