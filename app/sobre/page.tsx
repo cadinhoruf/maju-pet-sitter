@@ -1,13 +1,9 @@
-import { Footer } from "@/components/footer";
-import { Navigation } from "@/components/navigation";
 import { Clock, Heart, PawPrint, Shield, Star } from "lucide-react";
 import Link from "next/link";
 
 export default function Sobre() {
   return (
-    <div className="bg-background min-h-screen">
-      <Navigation />
-
+    <>
       {/* Main Content */}
       <section className="py-16">
         <div className="mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
@@ -17,13 +13,23 @@ export default function Sobre() {
                 Minha paixão pelos animais
               </h2>
               <p className="mb-6 text-muted-foreground text-lg">
-                Desde pequena, sempre tive uma conexão especial com os animais. Cresci cercada por pets e aprendi desde cedo que cada animal tem sua personalidade única e merece amor, respeito e cuidados especiais.
+                Desde pequena, sempre tive uma conexão especial com os animais.
+                Cresci cercada por pets e aprendi desde cedo que cada animal tem
+                sua personalidade única e merece amor, respeito e cuidados
+                especiais.
               </p>
               <p className="mb-6 text-muted-foreground text-lg">
-                Minha experiência com animais começou em casa, cuidando dos nossos próprios pets, e se expandiu quando comecei a ajudar amigos e vizinhos com seus companheiros de quatro patas. Foi aí que percebi que poderia transformar minha paixão em uma profissão.
+                Minha experiência com animais começou em casa, cuidando dos
+                nossos próprios pets, e se expandiu quando comecei a ajudar
+                amigos e vizinhos com seus companheiros de quatro patas. Foi aí
+                que percebi que poderia transformar minha paixão em uma
+                profissão.
               </p>
               <p className="mb-8 text-muted-foreground text-lg">
-                Hoje, com anos de experiência em cuidados pet, me especializo em entender as necessidades individuais de cada animal, garantindo que eles se sintam seguros, felizes e bem cuidados na ausência de seus tutores.
+                Hoje, com anos de experiência em cuidados pet, me especializo em
+                entender as necessidades individuais de cada animal, garantindo
+                que eles se sintam seguros, felizes e bem cuidados na ausência
+                de seus tutores.
               </p>
             </div>
 
@@ -32,10 +38,13 @@ export default function Sobre() {
                 <div className="flex justify-center items-center bg-primary/10 mx-auto mb-6 rounded-full w-32 h-32">
                   <Heart className="w-16 h-16 text-primary" />
                 </div>
-                <h3 className="mb-4 font-bold text-foreground text-2xl">Minha Missão</h3>
+                <h3 className="mb-4 font-bold text-foreground text-2xl">
+                  Minha Missão
+                </h3>
                 <p className="text-muted-foreground">
-                  Proporcionar cuidado, amor e atenção personalizada para cada pet,
-                  garantindo que eles se sintam seguros e felizes enquanto seus tutores estão ausentes.
+                  Proporcionar cuidado, amor e atenção personalizada para cada
+                  pet, garantindo que eles se sintam seguros e felizes enquanto
+                  seus tutores estão ausentes.
                 </p>
               </div>
             </div>
@@ -44,7 +53,7 @@ export default function Sobre() {
       </section>
 
       {/* Values Section */}
-      <section className="bg-gray-50 py-16">
+      <section className="py-16">
         <div className="mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
           <div className="mb-16 text-center">
             <h2 className="mb-4 font-bold text-gray-900 text-3xl">
@@ -62,7 +71,8 @@ export default function Sobre() {
               </div>
               <h3 className="mb-2 font-semibold text-gray-900 text-xl">Amor</h3>
               <p className="text-gray-600">
-                Trato cada pet com carinho genuíno, como se fosse meu próprio animal de estimação.
+                Trato cada pet com carinho genuíno, como se fosse meu próprio
+                animal de estimação.
               </p>
             </div>
 
@@ -70,9 +80,12 @@ export default function Sobre() {
               <div className="flex justify-center items-center bg-primary/10 mx-auto mb-4 rounded-full w-16 h-16">
                 <Shield className="w-8 h-8 text-primary" />
               </div>
-              <h3 className="mb-2 font-semibold text-gray-900 text-xl">Segurança</h3>
+              <h3 className="mb-2 font-semibold text-gray-900 text-xl">
+                Segurança
+              </h3>
               <p className="text-gray-600">
-                Priorizo sempre a segurança e bem-estar do animal em todas as situações.
+                Priorizo sempre a segurança e bem-estar do animal em todas as
+                situações.
               </p>
             </div>
 
@@ -80,9 +93,12 @@ export default function Sobre() {
               <div className="flex justify-center items-center bg-primary/10 mx-auto mb-4 rounded-full w-16 h-16">
                 <Clock className="w-8 h-8 text-primary" />
               </div>
-              <h3 className="mb-2 font-semibold text-gray-900 text-xl">Pontualidade</h3>
+              <h3 className="mb-2 font-semibold text-gray-900 text-xl">
+                Pontualidade
+              </h3>
               <p className="text-gray-600">
-                Respeito rigorosamente os horários combinados para alimentação e passeios.
+                Respeito rigorosamente os horários combinados para alimentação e
+                passeios.
               </p>
             </div>
 
@@ -90,7 +106,9 @@ export default function Sobre() {
               <div className="flex justify-center items-center bg-primary/10 mx-auto mb-4 rounded-full w-16 h-16">
                 <Star className="w-8 h-8 text-primary" />
               </div>
-              <h3 className="mb-2 font-semibold text-gray-900 text-xl">Excelência</h3>
+              <h3 className="mb-2 font-semibold text-gray-900 text-xl">
+                Excelência
+              </h3>
               <p className="text-gray-600">
                 Busco sempre oferecer o melhor cuidado possível para cada pet.
               </p>
@@ -113,7 +131,9 @@ export default function Sobre() {
 
           <div className="gap-8 grid md:grid-cols-2">
             <div className="bg-white p-8 border border-gray-200 rounded-lg">
-              <h3 className="mb-4 font-semibold text-gray-900 text-2xl">Cuidados Básicos</h3>
+              <h3 className="mb-4 font-semibold text-gray-900 text-2xl">
+                Cuidados Básicos
+              </h3>
               <ul className="space-y-3 text-gray-600">
                 <li className="flex items-center">
                   <PawPrint className="mr-3 w-5 h-5 text-primary" />
@@ -135,7 +155,9 @@ export default function Sobre() {
             </div>
 
             <div className="bg-white p-8 border border-gray-200 rounded-lg">
-              <h3 className="mb-4 font-semibold text-gray-900 text-2xl">Atividades e Exercícios</h3>
+              <h3 className="mb-4 font-semibold text-gray-900 text-2xl">
+                Atividades e Exercícios
+              </h3>
               <ul className="space-y-3 text-gray-600">
                 <li className="flex items-center">
                   <PawPrint className="mr-3 w-5 h-5 text-primary" />
@@ -166,7 +188,8 @@ export default function Sobre() {
             Pronta para cuidar do seu pet com carinho
           </h2>
           <p className="mb-8 text-primary-foreground text-xl">
-            Entre em contato e vamos conversar sobre as necessidades do seu melhor amigo
+            Entre em contato e vamos conversar sobre as necessidades do seu
+            melhor amigo
           </p>
           <div className="flex sm:flex-row flex-col justify-center gap-4">
             <Link
@@ -176,7 +199,7 @@ export default function Sobre() {
               Entrar em contato
             </Link>
             <Link
-              href="/servicos"
+              href="/#servicos"
               className="inline-flex items-center hover:bg-white px-8 py-4 border-2 border-white rounded-lg font-semibold text-white hover:text-primary transition-colors"
             >
               Ver serviços
@@ -184,8 +207,6 @@ export default function Sobre() {
           </div>
         </div>
       </section>
-
-      <Footer />
-    </div>
+    </>
   );
 }

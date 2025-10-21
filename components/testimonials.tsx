@@ -1,6 +1,4 @@
-"use client";
-
-import { motion } from "framer-motion";
+import * as motion from "motion/react-client";
 import Image from "next/image";
 
 const testimonials = [
@@ -43,21 +41,18 @@ const testimonials = [
 
 export function Testimonials() {
   return (
-    <section id="depoimentos" className="bg-muted/50 py-20">
+    <section id="depoimentos" className="py-20">
       <div className="mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         <motion.div
           className="mb-16 text-center"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.1 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
           viewport={{ once: true }}
         >
-          <h2 className="mb-4 font-bold text-foreground text-4xl">
-            O que meus clientes dizem sobre mim
-          </h2>
-          <p className="mx-auto max-w-3xl text-muted-foreground text-lg">
+          <h2 className="mx-auto max-w-3xl text-foreground text-4xl">
             O que os pets diriam sobre mim, segundo seus donos.
-          </p>
+          </h2>
         </motion.div>
 
         <div className="gap-8 grid md:grid-cols-3">
@@ -69,7 +64,6 @@ export function Testimonials() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.2 }}
               viewport={{ once: true }}
-              whileHover={{ y: -5 }}
             >
               <div className="relative mb-6">
                 <div className="relative mx-auto rounded-full w-24 h-24 overflow-hidden">
@@ -79,7 +73,6 @@ export function Testimonials() {
                     fill
                     className="object-cover"
                     loading="lazy"
-                    title={`Depoimento de ${testimonial.name}`}
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   />
                 </div>

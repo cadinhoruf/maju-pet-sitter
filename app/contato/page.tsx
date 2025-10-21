@@ -1,7 +1,5 @@
 "use client";
 
-import { Footer } from "@/components/footer";
-import { Navigation } from "@/components/navigation";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
@@ -44,9 +42,7 @@ Gostaria de saber mais sobre seus serviços de pet sitting/dog walking.`;
   };
 
   return (
-    <div className="bg-background min-h-screen">
-      <Navigation />
-
+    <>
       {/* Contact Section */}
       <section className="py-16">
         <div className="mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
@@ -155,8 +151,6 @@ Gostaria de saber mais sobre seus serviços de pet sitting/dog walking.`;
           </div>
         </div>
       </section>
-
-      <Footer />
-    </div>
+    </>
   );
 }

@@ -1,18 +1,17 @@
 import { CookieConsent } from "@/components/cookie-consent";
+import { Footer } from "@/components/footer";
 import { GoogleAnalyticsComponent } from "@/components/google-analytics";
+import { Navigation } from "@/components/navigation";
 import { Analytics } from "@vercel/analytics/next";
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
+  weight: "400",
 });
 
 export const metadata: Metadata = {
@@ -63,9 +62,13 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${inter.variable} antialiased`}
       >
-        {children}
+        <Navigation />
+        <main className="relative bg-linear-to-bl from-primary/5 to-primary/1 min-h-screen overflow-hidden">
+          {children}
+        </main>
+        <Footer />
         {gaMeasurementId && (
           <GoogleAnalyticsComponent measurementId={gaMeasurementId} />
         )}

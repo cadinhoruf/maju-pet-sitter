@@ -1,6 +1,5 @@
 "use client";
-
-import { motion } from "framer-motion";
+import * as motion from "motion/react-client";
 import Image from "next/image";
 import { useState } from "react";
 
@@ -39,12 +38,12 @@ export function FAQ() {
       <div className="mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         <div className="items-center gap-12 grid lg:grid-cols-2">
           {/* FAQ Content */}
-          <div className="lg:col-span-1">
+          <div className="order-2 lg:order-1 lg:col-span-1">
             <motion.div
               className="mb-12"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
             >
               <h2 className="mb-4 font-bold text-foreground text-4xl">
@@ -59,7 +58,7 @@ export function FAQ() {
               {faqs.map((faq, index) => (
                 <motion.div
                   key={index}
-                  className="pb-4 border-muted/30 border-b"
+                  className="shadow-sm p-2 border-primary/30 border-b rounded-lg"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -98,25 +97,25 @@ export function FAQ() {
           </div>
 
           {/* Image Column */}
-          <div className="lg:col-span-1">
+          <motion.div className="order-1 lg:order-2 lg:col-span-1" initial={{ opacity: 0, x: 20 }}
+            transition={{ duration: 1.2, delay: 0.2 }}
+            viewport={{ once: true }}
+            whileInView={{ opacity: 1, x: 0 }}
+          >
             <div className="flex justify-center">
-              <div className="relative">
-                <div className="relative rounded-full w-full max-w-lg overflow-hidden">
-                  <Image
-                    src="/FAQ.png"
-                    alt="Cachorro curioso e atento - FAQ Maria Julia Pet Sitter"
-                    width={500}
-                    height={600}
-                    className="brightness-90 rounded-full w-full h-auto object-cover"
-                    priority
-                    loading="eager"
-                    title="Pet curioso e atento"
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  />
-                </div>
+              <div className="relative rounded-full w-full max-w-lg overflow-hidden">
+                <Image
+                  src="/FAQ.png"
+                  alt="Cachorro curioso e atento - FAQ Maria Julia Pet Sitter"
+                  width={400}
+                  height={400}
+                  className="rounded-full w-full h-auto object-center object-cover scale-75"
+                  priority
+                  loading="eager"
+                />
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>
