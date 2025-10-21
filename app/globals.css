@@ -46,7 +46,7 @@
 :root {
   --radius: 2rem;
   --background: oklch(1 0 0);
-  --foreground: oklch(0.141 0.005 285.823);
+  --foreground: oklch(0.3131 0.005 285.823);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.141 0.005 285.823);
   --popover: oklch(1 0 0);
@@ -120,5 +120,11 @@
   body {
     @apply bg-background text-foreground;
     font-family: var(--font-inter), sans-serif;
+  }
+}
+
+@layer base {
+  h1 {
+    @apply text-foreground;
   }
 }

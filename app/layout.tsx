@@ -65,7 +65,7 @@ export default function RootLayout({
         className={`${inter.variable} antialiased`}
       >
         <Navigation />
-        <main className="relative bg-linear-to-bl from-primary/5 to-primary/1 min-h-screen overflow-hidden">
+        <main className="relative bg-linear-to-bl from-primary/25 to-primary/1 min-h-screen overflow-hidden">
           {children}
         </main>
         <Footer />

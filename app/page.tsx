@@ -9,13 +9,13 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <div>
+    <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative py-20 overflow-hidden font-lexend">
-        <div className="z-10 relative mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+      <section className="relative py-24 lg:py-32 overflow-hidden">
+        <div className="mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl container">
           <div className="text-center">
             <AnimatedSection delay={0}>
-              <h1 className="mb-6 font-bold text-5xl md:text-6xl text-accent-foreground">
+              <h1 className="mb-6 font-bold text-5xl md:text-6xl">
                 Seu pet merece o
                 <motion.span
                   className="bg-clip-text bg-linear-to-br from-primary to-primary/70 text-transparent"
@@ -29,13 +29,13 @@ export default function Home() {
               </h1>
             </AnimatedSection>
             <AnimatedSection delay={0.2}>
-              <p className="mx-auto mb-6 max-w-4xl text-muted-foreground text-xl md:text-2xl leading-relaxed">
+              <p className="mx-auto mb-8 max-w-4xl text-muted-foreground text-xl md:text-2xl leading-relaxed">
                 Preparada para dar ao seu pet toda a atenção e cuidado que ele
                 precisa, com carinho, dedicação e experiência profissional.
               </p>
             </AnimatedSection>
             <AnimatedSection delay={0.4}>
-              <p className="mx-auto mb-8 max-w-3xl text-muted-foreground text-lg">
+              <p className="mx-auto mb-12 max-w-3xl text-muted-foreground text-lg leading-relaxed">
                 Cuidados personalizados, passeios seguros e muito amor para o
                 seu melhor amigo. Porque quando você não pode estar presente, eu
                 estou aqui para garantir que ele se sinta amado e bem cuidado.
@@ -43,13 +43,13 @@ export default function Home() {
             </AnimatedSection>
 
             <AnimatedSection delay={0.6}>
-              <div className="flex sm:flex-row flex-col justify-center items-center gap-4 mb-12">
-                <WhatsAppButton variant="primary" className="text-lg">
+              <div className="flex sm:flex-row flex-col justify-center items-center gap-6 mb-16">
+                <WhatsAppButton variant="primary" className="px-8 py-4 text-lg">
                   Entrar em contato
                 </WhatsAppButton>
                 <Link
                   href="#servicos"
-                  className="inline-flex items-center hover:bg-primary px-8 py-4 border-2 border-primary rounded-lg font-semibold text-primary hover:text-primary-foreground text-lg transition-colors"
+                  className="inline-flex items-center hover:bg-primary px-8 py-4 border-2 border-primary rounded-lg font-semibold text-primary hover:text-primary-foreground text-lg hover:scale-105 transition-all duration-300"
                 >
                   <PawPrint className="mr-2 w-5 h-5" />
                   Ver serviços
@@ -104,13 +104,13 @@ export default function Home() {
       {/* About Section */}
       <motion.section
         id="sobre"
-        className="y-16"
+        className="bg-muted/30 py-20 lg:py-24"
         initial={{ opacity: 0, y: 20 }}
         transition={{ duration: 1.2, delay: 0.2 }}
         viewport={{ once: true }}
         whileInView={{ opacity: 1, y: 0 }}
       >
-        <div className="mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+        <div className="mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl container">
           <div className="items-center gap-12 grid lg:grid-cols-2">
             {/* Image Column */}
             <div className="lg:col-span-1">
@@ -131,11 +131,11 @@ export default function Home() {
             </div>
 
             {/* Text Content Column */}
-            <div className="lg:col-span-1">
-              <h2 className="mb-6 font-bold text-foreground text-4xl">
+            <div className="space-y-6 lg:col-span-1">
+              <h2 className="font-bold text-foreground text-4xl lg:text-5xl leading-tight">
                 Faça ele mais feliz e mais saudável
               </h2>
-              <div className="space-y-4 mb-8">
+              <div className="space-y-6">
                 <p className="text-muted-foreground text-lg">
                   Eu sei o quanto você ama o bixinho e o quanto ele faz parte da
                   sua vida. Por isso, cuido de cada animal com atenção, carinho
@@ -159,23 +159,25 @@ export default function Home() {
 
       {/* Why Choose Me Section */}
       <motion.section
-        className="py-16"
+        className="py-20 lg:py-24"
         initial={{ opacity: 0, x: -20 }}
         transition={{ duration: 1.2, delay: 0.2 }}
         viewport={{ once: true }}
         whileInView={{ opacity: 1, x: 0 }}
       >
-        <div className="mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+        <div className="mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl container">
           <div className="items-center gap-12 grid lg:grid-cols-2">
-            <div className="space-y-6 order-2 lg:order-1">
-              <h2 className="font-bold text-foreground text-4xl">
-                Por que você precisa da minha ajuda ?
-              </h2>
-              <p className="text-muted-foreground text-lg">
-                Talvez você fique fora por um tempo ou esteja ocupado demais
-                para dar ao seu pet os cuidados que ele merece. É aí que meus
-                serviços entram em ação.
-              </p>
+            <div className="space-y-8 order-2 lg:order-1">
+              <div className="space-y-4">
+                <h2 className="font-bold text-foreground text-4xl lg:text-5xl leading-tight">
+                  Por que você precisa da minha ajuda?
+                </h2>
+                <p className="text-muted-foreground text-lg leading-relaxed">
+                  Talvez você fique fora por um tempo ou esteja ocupado demais
+                  para dar ao seu pet os cuidados que ele merece. É aí que meus
+                  serviços entram em ação.
+                </p>
+              </div>
 
               {/* Icon List */}
               <ul className="space-y-4">
@@ -244,23 +246,25 @@ export default function Home() {
         </div>
       </motion.section>
 
-      {/* Hero Section */}
-      <section id="servicos" className="py-16">
-        <div className="mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl text-center">
-          <h1 className="mb-6 font-bold text-foreground text-4xl">
-            Meus Serviços
-          </h1>
-          <p className="mx-auto mb-8 max-w-3xl text-muted-foreground text-xl">
-            Cuidados personalizados para o seu pet, com carinho e
-            profissionalismo
-          </p>
+      {/* Services Section */}
+      <section id="servicos" className="bg-muted/20 py-20 lg:py-24">
+        <div className="mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl text-center container">
+          <div className="space-y-4 mb-16">
+            <h1 className="font-bold text-foreground text-4xl lg:text-5xl leading-tight">
+              Meus Serviços
+            </h1>
+            <p className="mx-auto max-w-3xl text-muted-foreground text-xl leading-relaxed">
+              Cuidados personalizados para o seu pet, com carinho e
+              profissionalismo
+            </p>
+          </div>
         </div>
 
         {/* Main Services */}
-        <div className="space-y-12 mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
-          <div className="gap-12 grid lg:grid-cols-2">
+        <div className="mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl container">
+          <div className="gap-8 lg:gap-12 grid lg:grid-cols-2 mb-16">
             {/* Pet Sitting Service */}
-            <div className="flex flex-col bg-card shadow-sm p-8 border rounded-lg h-full">
+            <div className="flex flex-col bg-card shadow-lg hover:shadow-xl p-8 border rounded-xl h-full transition-shadow duration-300">
               <div className="mb-8 text-center">
                 <div className="flex justify-center items-center bg-primary/10 mx-auto mb-4 rounded-full w-20 h-20">
                   <Heart className="w-10 h-10 text-primary" />
@@ -334,7 +338,7 @@ export default function Home() {
             </div>
 
             {/* Dog Walking Service */}
-            <div className="flex flex-col bg-card shadow-sm p-8 border rounded-lg h-full">
+            <div className="flex flex-col bg-card shadow-lg hover:shadow-xl p-8 border rounded-xl h-full transition-shadow duration-300">
               <div className="mb-8 text-center">
                 <div className="flex justify-center items-center bg-primary/10 mx-auto mb-4 rounded-full w-20 h-20">
                   <PawPrint className="w-10 h-10 text-primary" />
@@ -410,52 +414,52 @@ export default function Home() {
           </div>
 
           {/* Additional Services */}
-          <div className="mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
-            <div className="mb-16 text-center">
-              <h2 className="mb-4 font-bold text-gray-900 text-3xl">
+          <div className="mb-16">
+            <div className="space-y-4 mb-12 text-center">
+              <h2 className="font-bold text-gray-900 text-3xl lg:text-4xl">
                 Serviços Adicionais
               </h2>
-              <p className="mx-auto max-w-3xl text-gray-600 text-lg">
+              <p className="mx-auto max-w-3xl text-gray-600 text-lg leading-relaxed">
                 Cuidados extras para garantir o bem-estar completo do seu pet
               </p>
             </div>
 
-            <div className="gap-8 grid md:grid-cols-3">
-              <div className="bg-white shadow-sm p-6 rounded-lg text-center">
-                <div className="flex justify-center items-center bg-primary/10 mx-auto mb-4 rounded-full w-16 h-16">
-                  <Clock className="w-7 h-7 text-primary" />
+            <div className="gap-6 grid md:grid-cols-3">
+              <div className="bg-white shadow-lg hover:shadow-xl p-8 rounded-xl text-center transition-shadow duration-300">
+                <div className="flex justify-center items-center bg-primary/10 mx-auto mb-6 rounded-full w-16 h-16">
+                  <Clock className="w-8 h-8 text-primary" />
                 </div>
-                <h3 className="mb-3 font-semibold text-gray-900 text-xl">
+                <h3 className="mb-4 font-semibold text-gray-900 text-xl">
                   Cuidados Especiais
                 </h3>
-                <p className="mb-4 text-gray-600">
+                <p className="text-gray-600 leading-relaxed">
                   Administração de medicamentos, cuidados pós-cirúrgicos e
                   atenção especial para pets idosos ou com necessidades
                   especiais.
                 </p>
               </div>
 
-              <div className="bg-white shadow-sm p-6 rounded-lg text-center">
-                <div className="flex justify-center items-center bg-primary/10 mx-auto mb-4 rounded-full w-16 h-16">
-                  <Shield className="w-7 h-7 text-primary" />
+              <div className="bg-white shadow-lg hover:shadow-xl p-8 rounded-xl text-center transition-shadow duration-300">
+                <div className="flex justify-center items-center bg-primary/10 mx-auto mb-6 rounded-full w-16 h-16">
+                  <Shield className="w-8 h-8 text-primary" />
                 </div>
-                <h3 className="mb-3 font-semibold text-gray-900 text-xl">
+                <h3 className="mb-4 font-semibold text-gray-900 text-xl">
                   Visitas de Emergência
                 </h3>
-                <p className="mb-4 text-gray-600">
+                <p className="text-gray-600 leading-relaxed">
                   Disponibilidade para situações urgentes, garantindo que seu
                   pet nunca fique desamparado quando você precisar.
                 </p>
               </div>
 
-              <div className="bg-white shadow-sm p-6 rounded-lg text-center">
-                <div className="flex justify-center items-center bg-primary/10 mx-auto mb-4 rounded-full w-16 h-16">
-                  <Heart className="w-7 h-7 text-primary" />
+              <div className="bg-white shadow-lg hover:shadow-xl p-8 rounded-xl text-center transition-shadow duration-300">
+                <div className="flex justify-center items-center bg-primary/10 mx-auto mb-6 rounded-full w-16 h-16">
+                  <Heart className="w-8 h-8 text-primary" />
                 </div>
-                <h3 className="mb-3 font-semibold text-gray-900 text-xl">
+                <h3 className="mb-4 font-semibold text-gray-900 text-xl">
                   Acompanhamento Regular
                 </h3>
-                <p className="mb-4 text-gray-600">
+                <p className="text-gray-600 leading-relaxed">
                   Planos de cuidado contínuo para pets que precisam de atenção
                   regular, com preços especiais para contratos mensais.
                 </p>
@@ -464,18 +468,18 @@ export default function Home() {
           </div>
 
           {/* Pricing Information */}
-          <div className="mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
-            <div className="mb-16 text-center">
-              <h2 className="mb-4 font-bold text-gray-900 text-3xl">
+          <div className="mb-16">
+            <div className="space-y-4 mb-12 text-center">
+              <h2 className="font-bold text-gray-900 text-3xl lg:text-4xl">
                 Informações de Preços
               </h2>
-              <p className="text-muted-foreground text-sm">
+              <p className="mx-auto max-w-2xl text-muted-foreground text-sm">
                 Os valores estão sujeitos a alteração conforme a necessidade do
                 pet e do dono. Entre em contato para mais informações.
               </p>
             </div>
 
-            <div className="bg-white mx-auto p-8 border border-gray-200 rounded-lg max-w-4xl">
+            <div className="bg-white shadow-lg mx-auto p-8 border border-gray-200 rounded-xl max-w-4xl">
               <div className="gap-8 grid md:grid-cols-2">
                 <div>
                   <h3 className="mb-6 font-semibold text-gray-900 text-2xl">
@@ -556,7 +560,7 @@ export default function Home() {
         </div>
 
         {/* Additional Info */}
-        <div className="mt-16 text-center">
+        <div className="mt-16 w-full text-center">
           <div className="bg-primary/5 mx-auto p-8 border border-primary/20 rounded-xl max-w-4xl">
             <h3 className="mb-4 font-semibold text-foreground text-xl">
               Precisa de algo mais específico?
@@ -583,15 +587,21 @@ export default function Home() {
       <FAQ />
 
       {/* CTA Section */}
-      <section id="contato" className="bg-primary py-16">
-        <div className="mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl text-center">
-          <h2 className="mb-4 font-bold text-primary-foreground text-3xl">
-            Precisa de alguém para cuidar ou passear com seu doguinho?
-          </h2>
-          <p className="mb-8 text-primary-foreground/80 text-xl">
-            Entre em contato comigo, será um prazer para mim cuidar do seu pet!
-          </p>
-          <WhatsAppButton variant="secondary">Iniciar conversa</WhatsAppButton>
+      <section id="contato" className="bg-primary py-20 lg:py-24">
+        <div className="mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl text-center container">
+          <div className="space-y-6">
+            <h2 className="font-bold text-primary-foreground text-3xl lg:text-4xl leading-tight">
+              Precisa de alguém para cuidar ou passear com seu doguinho?
+            </h2>
+            <p className="mx-auto max-w-2xl text-primary-foreground/80 text-xl leading-relaxed">
+              Entre em contato comigo, será um prazer para mim cuidar do seu pet!
+            </p>
+            <div className="pt-4">
+              <WhatsAppButton variant="secondary" className="px-8 py-4 text-lg">
+                Iniciar conversa
+              </WhatsAppButton>
+            </div>
+          </div>
         </div>
       </section>
 
