@@ -22,6 +22,11 @@ export const metadata: Metadata = {
   authors: [{ name: "Maria Julia Pet Sitter" }],
   creator: "Maria Julia Pet Sitter",
   publisher: "Maria Julia Pet Sitter",
+  icons: {
+    icon: "/favicon.svg",
+    shortcut: "/favicon.svg",
+    apple: "/favicon.svg",
+  },
   robots: {
     index: true,
     follow: true,
